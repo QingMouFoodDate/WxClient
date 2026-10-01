@@ -2,11 +2,11 @@
 
 > 在超市拿起一盒牛奶，拍一张，看到它是什么时候生产的。
 
-本仓是 [轻眸识刻](https://github.com/QingMouFoodDate/QingMouPRD) 面向**普通消费者**的微信小程序。
+本仓是 [轻眸识刻](https://github.com/QingMouFoodDate/ProjectDocs) 面向**普通消费者**的微信小程序。
 
 > ⚠️ **状态：未来形态，暂不排期。**
 > 当前的全部精力在把模型训出来（平台在 [QingMouInfer](https://github.com/QingMouFoodDate/QingMouInfer)，
-> 训练代码在 [QingMouTrain](https://github.com/QingMouFoodDate/QingMouTrain)）。
+> 训练代码在 [ModelTrain](https://github.com/QingMouFoodDate/ModelTrain)）。
 > 本仓先记录已经查证过的技术结论与硬约束，避免将来开工时踩一遍已知的坑。
 
 ---
@@ -144,21 +144,21 @@ QingMouMiniProgram/
 | :--- | :--- | :--- |
 | 模型清单与下载 | [QingMouInfer](https://github.com/QingMouFoodDate/QingMouInfer) 提供清单 + 预签名 URL | 下载、sha256 校验、按 `(model_version_id, target_platform)` 缓存 |
 | 推理接口（兜底） | [QingMouInfer](https://github.com/QingMouFoodDate/QingMouInfer) 开放 API | 按契约调用 |
-| 模型格式 | [QingMouTrain](https://github.com/QingMouFoodDate/QingMouTrain) 导出 **ONNX** | 直接加载 `.onnx`，无需额外转换 |
+| 模型格式 | [ModelTrain](https://github.com/QingMouFoodDate/ModelTrain) 导出 **ONNX** | 直接加载 `.onnx`，无需额外转换 |
 
-**与 RN 客户端共用同一条 ONNX 导出链路** —— 这意味着 [QingMouTrain](https://github.com/QingMouFoodDate/QingMouTrain) 只需要维护一种端侧格式。
+**与 RN 客户端共用同一条 ONNX 导出链路** —— 这意味着 [ModelTrain](https://github.com/QingMouFoodDate/ModelTrain) 只需要维护一种端侧格式。
 
 ---
 
 ## 相关文档
 
-仓库里只放代码，产品设计与全部决策依据在 [QingMouPRD](https://github.com/QingMouFoodDate/QingMouPRD)：
+仓库里只放代码，产品设计与全部决策依据在 [ProjectDocs](https://github.com/QingMouFoodDate/ProjectDocs)：
 
 | 文档 | 内容 |
 | :--- | :--- |
-| [PLAN.md](https://github.com/QingMouFoodDate/QingMouPRD/blob/main/PLAN.md) | 产品形态 + Issue 清单 |
-| [REPOS.md](https://github.com/QingMouFoodDate/QingMouPRD/blob/main/REPOS.md) | 仓库地图与跨仓契约 |
-| [P0120](https://github.com/QingMouFoodDate/QingMouPRD/blob/main/PRD/08_端接入/P0120_小程序接入契约.md) | 小程序接入契约（21 个端点、端侧能力硬约束表） |
+| [PLAN.md](https://github.com/QingMouFoodDate/ProjectDocs/blob/main/PLAN.md) | 产品形态 + Issue 清单 |
+| [REPOS.md](https://github.com/QingMouFoodDate/ProjectDocs/blob/main/REPOS.md) | 仓库地图与跨仓契约 |
+| [P0120](https://github.com/QingMouFoodDate/ProjectDocs/blob/main/PRD/08_端接入/P0120_小程序接入契约.md) | 小程序接入契约（21 个端点、端侧能力硬约束表） |
 
 ---
 
