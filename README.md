@@ -50,7 +50,7 @@ WxClient/ (推荐目录结构参考)
 ## 三、 跨仓接口契约
 
 本仓纯粹面向 C 端用户，通过标准 HTTPS 接口与后端通信：
-- **在线预测接口**：严格遵循 [`ProjectPRD/contracts/api_specs.md`](https://github.com/QingMouFoodDate/ProjectPRD/blob/main/contracts/api_specs.md) 中的 `POST /api/v1/ocr/predict`；
+- **在线预测接口**：严格遵循 [`ProjectPRD/contracts/API接口协议.md`](https://github.com/QingMouFoodDate/ProjectPRD/blob/main/contracts/API接口协议.md) 中的 `POST /api/v1/ocr/predict`；
 - **错例反馈接口**：遵循 `POST /api/v1/samples/feedback`。
 
 ---
