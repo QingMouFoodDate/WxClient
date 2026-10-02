@@ -39,18 +39,16 @@ flowchart LR
 
 ## 三、 推荐架构参考
 
-目录结构遵循微信小程序标准工程规范，除根目录配置外，子目录仅展示文件夹层级：
-
 ```text
 WxClient/
-├── README.md
-├── project.config.json
-├── app.json
-├── app.ts
-└── pages/
-    ├── index/
-    ├── result/
-    └── components/
+├── README.md                      # 小程序端说明文档与微信生态开发指引
+├── project.config.json            # 微信开发者工具工程构建配置
+├── app.json                       # 小程序全局页面路由与窗口外观配置
+├── app.ts                         # 小程序全局生命周期入口与应用初始化
+└── pages/                         # 小程序页面与交互视图目录
+    ├── index/                     # 首页轻量拍摄入口与选图相册流转
+    ├── result/                    # 识别结果卡片展示与缺项补充抽屉
+    └── components/                # 大字关怀组件、状态浮层与分享卡片
 ```
 
 ---
