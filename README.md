@@ -111,7 +111,10 @@ WxClient/                          # 微信小程序客户端仓库
 
 ## 六、权威依据与参考文档
 
-- **系统设计与规划**：[ProjectPRD/REQUIREMENTS.md](../ProjectPRD/REQUIREMENTS.md) · [ProjectPRD/ARCHITECTURE.md](../ProjectPRD/ARCHITECTURE.md) · [ProjectPRD/ROADMAP.md](../ProjectPRD/ROADMAP.md)
-- **跨仓技术契约**：[contracts/API.md](../ProjectPRD/contracts/API.md) · [contracts/DATA.md](../ProjectPRD/contracts/DATA.md) · [contracts/openapi.json](../ProjectPRD/contracts/openapi.json)
-- **规则与决策记录**：[contracts/DATE_RULES.md](../ProjectPRD/contracts/DATE_RULES.md) · [decisions/ADR-001-REPOSITORY_BOUNDARIES.md](../ProjectPRD/decisions/ADR-001-REPOSITORY_BOUNDARIES.md)
-- **工程与质量规范**：[standards/ENGINEERING.md](../ProjectPRD/standards/ENGINEERING.md)
+| 规范维度 | 事实源契约 | 核心约束说明 |
+| :--- | :--- | :--- |
+| **系统设计与规划** | [需求规格](../ProjectPRD/需求规格.md) · [系统架构](../ProjectPRD/系统架构.md) · [开发路线](../ProjectPRD/开发路线.md) | 确立系统功能边界、8 仓架构分层与 M0 迭代里程碑 |
+| **跨仓技术契约** | [在线接口契约](../ProjectPRD/contracts/在线接口契约.md) · [核心数据模型](../ProjectPRD/contracts/核心数据模型.md) · [openapi.json](../ProjectPRD/contracts/openapi.json) | 统一会话编排、REST 接口端点定义与 Observation/Evidence 数据模型 |
+| **规则与决策记录** | [日期推导规则](../ProjectPRD/contracts/日期推导规则.md) | 包装标示状态法定决策逻辑与 36 项测试向量基准 |
+| **工程与质量规范** | [工程协作指南](../ProjectPRD/standards/工程协作指南.md) | 跨仓协作规范、分支流转与代码提交规约 |
+
