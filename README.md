@@ -24,13 +24,15 @@ WxClient 规划面向以下典型使用场景：
 
 协同分工如下：
 
-| 客户端名称 | 架构定位 | 主要特点与协同分工 |
+| 客户端 | 定位 | 适合场景 |
 | :--- | :--- | :--- |
 | **MobileClient** | 移动端扩展方向 | 规划覆盖现场采集、手持防抖、弱网环境与本地离线台账 |
 | **WebClient** | 通用 Web 基础客户端 | 桌面大屏基准入口，提供原图覆层与字段卡片双重视图呈现 |
 | **WxClient** | 微信生态免安装入口 | 面向临时轻量查验、长辈大字关怀与家庭分享，降低使用门槛 |
 
-| 核心能力单元 | WxClient 目标职责 | InferPlatform 目标职责 |
+它与 InferPlatform 在线中枢的职责分工如下：
+
+| 能力 | WxClient 目标职责 | InferPlatform 目标职责 |
 | :--- | :--- | :--- |
 | 微信拍照与相册选取 | 小程序负责实现 | 不负责客户端硬件 |
 | 长辈大字与适老交互 | 小程序端适配呈现 | 不负责前端渲染模式 |
@@ -40,6 +42,7 @@ WxClient 规划面向以下典型使用场景：
 | 字段级人工纠偏 | 提交表单修正并刷新界面 | 保存纠偏记录并即时重算决策 |
 | 微信卡片安全分享 | 用户确认后触发分享 | 提供脱敏结构化数据 |
 | 临期订阅提醒探索 | 发起用户订阅授权请求 | 规划后端提醒调度任务 |
+
 
 系统输出限定为食品包装上的**标示状态**，不替代食品安全检测，不直接判断食品是否绝对可食用。
 
@@ -109,13 +112,14 @@ WxClient/                          # 微信小程序客户端仓库
 
 ---
 
-## 六、权威依据与参考文档
+## 六、相关文档
 
-| 规范维度 | 事实源契约 | 核心约束说明 |
-| :--- | :--- | :--- |
-| **系统设计与规划** | [需求规格](../ProjectPRD/需求规格.md) · [系统架构](../ProjectPRD/系统架构.md) · [开发路线](../ProjectPRD/开发路线.md) | 确立系统功能边界、8 仓架构分层与 M0 迭代里程碑 |
-| **跨仓技术契约** | [contracts/API.md](../ProjectPRD/contracts/API.md) · [contracts/DATA.md](../ProjectPRD/contracts/DATA.md) · [openapi.json](../ProjectPRD/contracts/openapi.json) | 统一会话编排、REST 接口端点定义与 Observation/Evidence 数据模型 |
+- [需求规格](../ProjectPRD/需求规格.md)
+- [系统架构](../ProjectPRD/系统架构.md)
+- [开发路线](../ProjectPRD/开发路线.md)
+- [API 接口契约](../ProjectPRD/contracts/API.md)
+- [数据模型](../ProjectPRD/contracts/DATA.md)
+- [日期推导规则](../ProjectPRD/contracts/日期推导规则.md)
+- [工程协作指南](../ProjectPRD/standards/工程协作指南.md)
 
-| **规则与决策记录** | [日期推导规则](../ProjectPRD/contracts/日期推导规则.md) | 包装标示状态法定决策逻辑与 36 项测试向量基准 |
-| **工程与质量规范** | [工程协作指南](../ProjectPRD/standards/工程协作指南.md) | 跨仓协作规范、分支流转与代码提交规约 |
 
