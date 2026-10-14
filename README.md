@@ -79,6 +79,8 @@ M0 补拍新图需新建会话，C0 再支持向原会话追加图片；信息�
 - **通俗白话引导**：将“未检出”或“低置信度”分别转化为“未找到日期，请补拍日期区域”或“识别不确定，请核对包装”；
 - **大点击热区**：设置宽裕触控面积，降低误触率。
 
+可靠直接到期日可单独判断期限，缺生产日期不自动显示无法判定。M0 固定天数临期默认候选 30 天，具体配置由服务端给出；卡片展示标示来源、必要的起算说明和复核提示，不将临期阈值当作法律规定，也不把日期差一天或生产/到期同日直接判断为错误。
+
 ### 3. 微信生态专属探索
 
 - **家庭卡片分享**：支持将日期查验结果生成聊天卡片，仅含必要的包装标示信息，不携带令牌或原始私图；
@@ -102,6 +104,8 @@ M0 补拍新图需新建会话，C0 再支持向原会话追加图片；信息�
 创建、上传和纠偏均使用 `Idempotency-Key`，同一请求重试复用原键和原内容，换图或改值使用新键。查询、上传和纠偏使用短期不透明 `session_token` 作为 Bearer 凭据，并校验会话与图片归属。GET 返回完整结果且不返回令牌，凭据遗失时需新建会话。
 
 当前 `correction.v1` 仅定义 `mfg_date`、`exp_date`、`shelf_life`、`storage_condition`；OCR 原文/bbox 修正及图像变体展示尚未定义在线契约，需先评审。
+
+在线结果拟按共同升级的 decision.v2 接入，保留 calculation_profile_id 对不可变计算依据的引用，不混用新旧载荷。服务端研究候选先评估可靠性，再决定重试或补拍；小程序用简短指引呈现，合法的不确定或复核结果不当作技术 FAILED，用户无需理解后台处理细节。
 
 ---
 
@@ -129,5 +133,6 @@ WxClient/                          # 微信小程序客户端仓库
 - [数据模型](https://github.com/QingMouFoodDate/ProjectPRD/blob/main/contracts/DATA.md)
 - [日期推导规则](https://github.com/QingMouFoodDate/ProjectPRD/blob/main/contracts/日期推导规则.md)
 - [工程协作指南](https://github.com/QingMouFoodDate/ProjectPRD/blob/main/standards/工程协作指南.md)
+- [研究现状](https://github.com/QingMouFoodDate/ProjectPRD/blob/main/references/研究现状.md)
 
 
